@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CapaConexion.Models
+namespace DatosLayer
 {
-    internal class customers
+    public class customers
     {
         public String CompanyName { get; set; }
         public String ContactName { get; set; }
@@ -18,5 +18,6 @@ namespace CapaConexion.Models
         public String Country { get; set; }
         public String Phone { get; set; }
         public String Fax { get; set; }
+
     }
 }
