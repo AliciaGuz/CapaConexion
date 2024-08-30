@@ -66,10 +66,11 @@ namespace Datoslayer
                 selectForID = selectForID + "      ,[Phone] " + "\n";
                 selectForID = selectForID + "      ,[Fax] " + "\n";
                 selectForID = selectForID + "  FROM [dbo].[Customers] " + "\n";
-                selectForID = selectForID + $"  Where CustomerID = '{id}'";
+                selectForID = selectForID + $"  Where CustomerID = @customerID";
 
                 using (SqlCommand comando = new SqlCommand(selectForID, conexion))
                 {
+                    comando.Parameters.AddWithValue("customerID", id);
                     var reader = comando.ExecuteReader();
                     customers customers = null;
 
