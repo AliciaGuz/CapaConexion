@@ -42,5 +42,14 @@ namespace CapaConexion
         {
          
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            var cliente = customerRepository.ObtenerPorID(txtBuscar.Text);
+            if (cliente != null)
+            {
+                MessageBox.Show(cliente.CompanyName);
+            }
+        }
     }
 }
